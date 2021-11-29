@@ -1,10 +1,11 @@
 from flask import Flask, jsonify, request
+from models.task import Task
 
 app = Flask(__name__)
 
 tasks = [
-    {"title": "Thrash day", "description": "On Wednesdays take the trhash out", "complete": False},
-    {"title": "Chorus", "description": "Take sofia to chorus", "complete": True},
+    Task("Thrash day","On Wednesdays take the trhash out",False),
+    Task("Chorus","Take sofia to chorus",True),
 ]
 
 
